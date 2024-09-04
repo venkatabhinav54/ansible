@@ -7,13 +7,7 @@
   vars_prompt:
   - name: COURSE
     prompt: Please enter the course name
-    private: false
-  - name: DURATION
-    prompt: please enter the duration 
-    private: false #not confidential
-  - name: TRAINER
-    prompt: please enter the trainer name 
-    private: false #not confidential    
+    private: false  
   tasks:
   - name: print the information
     vars: #play level, all tasks in this play have access to this 
