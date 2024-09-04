@@ -18,4 +18,17 @@
       TRAINER: "Sivakumar REddy"
     ansible.builtin.debug:
       msg: "Hi, I am learning {{COURSE}}"
+
+
+
+
+
+#1. COMMAND LINE/ ARGS
+#2. TASK
+#3. FILES
+#4. PROMPT
+#5. PLAY
+#6. INVENTORY
+
+
   
