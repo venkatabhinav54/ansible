@@ -1,6 +1,6 @@
 - name: install nginx
-  hosts: web
   become: yes
+  hosts: web
   tasks:
   - name: print the stats
     ansble.builtin.debug:
