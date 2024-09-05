@@ -6,9 +6,9 @@
     sg_id: sg-005d29d3e5600a71e
     ami_id: ami-09c813fb71547fc4f
     instances: 
-    - mysql
-    - backend
-    - frontend
+    - 'mysql'
+    - 'backend'
+    - 'frontend'
   tasks: 
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -18,6 +18,6 @@
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
     loop: " {{ instances }}"
-    
+
 
 
