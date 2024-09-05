@@ -3,7 +3,7 @@
   hosts: web
   tasks:
   - name: print the stats
-    ansble.builtin.debug:
+    ansible.builtin.debug:
       msg: "{{ ansible_facts }}"
 
   - name: install nginx if redhat
