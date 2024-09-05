@@ -10,4 +10,4 @@
     - { name: 'mysql', state: 'present' }
     - { name: 'nginx', state: 'absent' }
     - { name: 'postfix', state: 'absent' }
-    - { name: 'https', state: 'present' }  
+    - { name: 'httpd', state: 'present' }  
