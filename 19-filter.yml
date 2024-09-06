@@ -1,0 +1,61 @@
+- name: demo on filters/functions
+  hosts: local
+  connection: local
+  tasks:
+  - name:  print the default variable
+    ansible.builtin.debug:
+      msg: "Hello {{ course | default('Ansible') }}"
+
+  - name: conver to uppercase
+    vars: 
+      greeting: "Hello Ramesh"
+    ansible.builtin.debug:
+      msg: "Hello {{ greeting | upper }}"
+
+  - name: convert to lowercase
+    vars:
+      greeting: "Hello Ramesh"
+    ansible.builtin.debug:
+      msg: "{{ greeting | lower }}"      
+
+  - name: get the unique numbers
+    vars: 
+      numbers: [1,2,3,45,4,3,2]
+    ansible.builtin.debug:
+      msg: " {{ number | unique }}"
+
+
+  - name: get the min and max numbers
+    vars: 
+      number: [1,2,3,45,4,3,2]
+    ansible.builtin.debug:
+      msg: "Min: {{ number | min }}, Max: {{ number | max }}"      
+
+
+  - name: convert map to list
+    vars:
+      course:
+        name: "Devops with AWS"
+        duration: 120Hrs
+        trainer: "Sivakumar Reddy"      
+    ansible.builtin.debug:
+      msg: "{{ course | dict2items }}"
+
+
+  - name: convert list to map 
+    vars: 
+      course:
+      - { "key": "name","value": "Devops with AWS"}  
+      - { "key": "duration","value": "120Hrs"}
+      - { "key": "trainer","value": "Sivakumar Reddy"}
+
+  - name: check the ip address
+    vars: 
+      myip: "356.168.1.1"
+    ansible.builtin.debug:
+      msg: "{{ myip | ansible.utils.ipv4 }}" 
+      
+       
+
+        
+        
