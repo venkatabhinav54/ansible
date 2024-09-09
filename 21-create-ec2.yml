@@ -11,7 +11,7 @@
     - mysql
     - backend
     - frontend
-    zone: daws81s.online
+    zone: devops1289.online
   tasks:
   - name: ansible to install boto3 and botocore
     ansible.builtin.pip:
