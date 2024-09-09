@@ -4,8 +4,8 @@
   # assignment
   # move this to vars_files
   vars:
-    subnet_id: subnet-09863c54177764565 # replace with your subnet id
-    sg_id: "sg-09a300a3729062c5a"
+    subnet_id: "subnet-05ea387e1c93e988f" # replace with your subnet id
+    sg_id: "sg-005d29d3e5600a71e"
     ami_id: "ami-09c813fb71547fc4f"
     instances:
     - mysql
